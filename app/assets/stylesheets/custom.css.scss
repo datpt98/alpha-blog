@@ -1,0 +1,74 @@
+$navbar-default-bg: #08088A;
+
+
+@import 'bootstrap/dist/css/bootstrap';
+
+#logo {
+	float: left;
+	font: 2em;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: red;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.jumbotron {
+	background-image: 
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), 
+		asset-url('cover_image.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 550px;
+	color: white;
+}
+
+.jumbotron h1 {
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.jumbotron p {
+	font-weight: bold;
+}
+
+.card {
+	padding: 1.5rem;
+}
+
+.article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.article-body {
+	border-top: 1px solid #eaeaea;
+	padding: 15px 0;
+}
+
+.article-action {
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea; 
+}
+
+footer {
+	border-top: 1px solid #eaeaea;
+}
+
+footer ul {
+	float: right;
+	list-style: none;
+}
+
+.col-form-label {
+	text-align: right;
+	font-weight: bold;
+}
