@@ -1,6 +1,5 @@
 <h1 class="center">Listing all articles</h1>
 
-
 <% @articles.each do |article| %>
 	<div class="row">
 		<div class="offset-sm-2 col-sm-8">
@@ -11,7 +10,7 @@
 				<div class="article-body">
 					<%= truncate(article.description, length: 100) %>
 				</div>
-				<div class="article-action">
+				<div class="article-actions">
 					<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-primary btn-sm" %>
 					<%= link_to "Delete this article", article_path(article), 
 																						 method: :delete, 
