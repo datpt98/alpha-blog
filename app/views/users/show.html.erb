@@ -8,5 +8,16 @@
 
 <h4 class="center"><%= @user.username %>'s articles</h4>
 
-<%= render 'articles/article', obj: @user.articles %>
+<br/>
+<div class="d-flex justify-content-center">
+	<%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+<br/>
 
+<%= render 'articles/article', obj: @user_articles %>
+
+<br/>
+<div class="d-flex justify-content-center">
+	<%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+<br/>

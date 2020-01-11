@@ -1,3 +1,15 @@
 <h1 class="center">Listing all articles</h1>
 
+<br/>
+<div class="d-flex justify-content-center">
+	<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+<br/>
+
 <%= render 'article', obj: @articles %>
+
+<br/>
+<div class="d-flex justify-content-center">
+	<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+</div>
+<br/>

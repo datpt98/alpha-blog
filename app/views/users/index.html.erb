@@ -1,0 +1,25 @@
+<h1 class="center"> All Alpha Bloggers</h1>
+
+<br/>
+<div class="d-flex justify-content-center">
+	<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+<br/>
+
+<div class="center">
+	<%= @users.each do |user| %>
+		<ul class="listing">
+			<div class="row">
+				<div class="offset-md-4 col-md-4 card bg-light">
+					<li><%= link_to gravatar_for(user), user_path(user) %> </li>
+					<li class="article-title">
+						<%= link_to user.username, user_path(user) %>
+					</li>
+					<li><small>
+						<%= pluralize(user.articles.count, "article") if user.articles %>
+					</small></li>
+				</div>
+			</div>
+		</ul>
+	<% end %>
+</div>
