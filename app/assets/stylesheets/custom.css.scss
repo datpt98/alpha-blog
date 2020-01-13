@@ -1,7 +1,4 @@
-$navbar-default-bg: #08088A;
-
-
-@import 'bootstrap/dist/css/bootstrap';
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 #logo {
 	float: left;
@@ -10,11 +7,16 @@ $navbar-default-bg: #08088A;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
+	padding: 0 10px;
+	transition: all 0.35s ease-in-out;
+
 }
 
 #logo:hover {
-	color: red;
+	color: rgb(0, 123, 255);
+	letter-spacing: 2px;
 	text-decoration: none;
+	padding: 0;
 }
 
 .center {
@@ -29,6 +31,10 @@ $navbar-default-bg: #08088A;
 	background-position: center;
 	height: 550px;
 	color: white;
+}
+
+.vertical-align {
+	padding: 70px 0;
 }
 
 .jumbotron h1 {

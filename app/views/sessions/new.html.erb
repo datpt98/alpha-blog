@@ -1,5 +1,5 @@
-<h1 class="center">Login</h1>
-
+<h1 class="center">Login to Alpha Blog</h1>
+<br/>
 <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
 	<div class="form-group row">
 		<div class="col-form-label col-sm-2">
@@ -15,7 +15,7 @@
 			<%= f.label :password %>
 		</div>
 		<div class="col-sm-8">
-			<%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+			<%= f.password_field :password, class: "form-control", placeholder: "Enter password", autocomplete: "off" %>
 		</div>
 	</div>
 
