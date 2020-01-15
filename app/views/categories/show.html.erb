@@ -1,15 +1,27 @@
 <h1 class="center"><%= "Category: " + @category.name %></h1>
+<br/>
 
-<br/>
-<div class="d-flex justify-content-center">
-	<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-</div>
-<br/>
+<% if logged_in? && current_user.admin? %>
+	<div class="center">
+		<%= link_to "Edit this category", edit_category_path(@category), class: "btn btn-primary btn-sm" %>
+	</div>
+	<br/>
+<% end %>
+
+<% if @category.articles.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>
+
 
 <%= render 'articles/article', obj: @category_articles %>
+<br/>
 
-<br/>
-<div class="d-flex justify-content-center">
-	<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
-</div>
-<br/>
+<% if @category.articles.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>

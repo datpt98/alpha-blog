@@ -11,12 +11,6 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 
-	def edit
-		if !logged_in?
-
-		end
-	end
-
 	def create
 		# render plain: params[:article].inspect
 		@article = Article.new(article_params)
@@ -29,6 +23,9 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+	
 	def update
 		if @article.update(article_params)
 			flash[:success] = "Article was successfully updated"

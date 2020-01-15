@@ -7,17 +7,22 @@
 </div>
 <br/>
 <h4 class="center"><%= @user.username %>'s articles</h4>
+<br/>
 
-<br/>
-<div class="d-flex justify-content-center">
-	<%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-</div>
-<br/>
+<% if @user_articles.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>
+
 
 <%= render 'articles/article', obj: @user_articles %>
+<br/>
 
-<br/>
-<div class="d-flex justify-content-center">
-	<%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-</div>
-<br/>
+<% if @user_articles.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>

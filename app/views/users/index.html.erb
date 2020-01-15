@@ -1,10 +1,13 @@
 <h1 class="center"> All Alpha Bloggers</h1>
+<br/>
 
-<br/>
-<div class="d-flex justify-content-center">
-	<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
-</div>
-<br/>
+
+<% if @users.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>
 
 <div class="center">
 	<% @users.each do |user| %>
@@ -31,3 +34,11 @@
 		</ul>
 	<% end %>
 </div>
+<br/>
+
+<% if @users.count > 5 %>
+	<div class="d-flex justify-content-center">
+		<%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+	</div>
+	<br/>
+<% end %>
