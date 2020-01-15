@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Blog application that is built on Ruby on Rails and Bootstrap. Features include:
 
-Things you may want to cover:
+* User signup and authentication
 
-* Ruby version
+* Creating, deleting, editing blogs
 
-* System dependencies
+* Tagging blog based on categories
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Certain actions are limited by admin only
