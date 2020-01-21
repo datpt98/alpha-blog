@@ -1,5 +1,5 @@
 # README
-Link: http://alpha-blog12.herokuapp.com/
+URL: http://alpha-blog12.herokuapp.com/
 
 
 A Blog application that is built on Ruby on Rails and Bootstrap. Features include:
